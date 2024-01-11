@@ -149,7 +149,7 @@ Example:
 Header File Guards
 ==================
 
-Headers should be protected against multiple inclusion with the usual:
+Headers should be protected against multiple inclusion using the usual #ifndef _FILE_H_ #define _FILE_H_ #endif pattern.
 
 #ifndef _FILE_H_
 #define _FILE_H_
