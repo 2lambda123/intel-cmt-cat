@@ -48,8 +48,8 @@ Please use the provided enhancement template when creating a new issue or pull r
 Creating Pull Requests
 ======================
 
-Pull requests should be created using standard procedure available on GitHub.
-It is important to fill in all required information into a template. For major
+Pull requests should be created using the standard procedure available on GitHub. It is important to fill
+It is important to fill in all required information into a template. For major modifications (e.g. adding a new feature, refactoring), it is recommended to share a high level document with the core development team via GitHub iss For major
 modifications (e.g. adding a new feature, refactoring), for effective
 development, it is recommended to share high level document with core
 development team via GitHub issue so that one can ask questions if one foresees
@@ -260,7 +260,7 @@ Make your changes, commit them, and submit them for review:
 
 git commit -a
 
-To see how to create pull requests on GitHub, please refer to "About pull
+Please use the provided pull request template and follow the standard procedure available on GitHub when creating pull requests. For detailed instructions, refer to "About pull
 requests" help page (https://help.github.com/articles/about-pull-requests/).
 
 Note: Please ensure that you have your username and email address set correctly
