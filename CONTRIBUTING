@@ -20,8 +20,16 @@ to intel-cmt-cat.
 Reporting Bugs
 ==============
 
-Bugs should be reported via GitHub issues. The description should include
-a platform name, OS and kernel version, PQoS library version and detailed
+Bugs should be reported via GitHub issues. The description should include the following information:
+a platform name, OS and kernel version, PQoS library version, and detailed steps to reproduce the bug. For example:
+
+1. Platform Name: XYZ
+2. OS and Kernel Version: ABC, Kernel v1.2.3
+3. PQoS Library Version: 1.2.3
+4. Steps to Reproduce:
+   a. Step 1
+   b. Step 2
+   c. Step 3
 information how to reproduce the bug.
 
 
