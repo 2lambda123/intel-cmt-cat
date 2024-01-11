@@ -65,7 +65,7 @@ General Guidelines
 The rules and guidelines given in this document cannot cover every situation,
 so the following general guidelines should be used as a fallback:
 
-The code style should be consistent within each individual file and directory.
+The code style should be consistent within each individual file and directory. In order to maintain consistency and best practices, it is recommended to use the checkpatch.pl script (version 0.32) from the Linux kernel to format the code.
 In the case of creating new files, the style should be consistent within
 each file in a given directory or module. The primary reason for coding
 standards is to increase code readability and comprehensibility, therefore
@@ -202,7 +202,18 @@ comments.
 Perl
 ====
 
-Perl code should be checked (and reformatted if necessary) using Perltidy tool.
+Perl code should be checked (and reformatted if necessary) using Perltidy tool with the following recommended flags:
+
+-bar - keep the brace on the right even for multiple-line test expressions
+-ce - cuddled else
+-pt=2 - parentheses horizontal tightness - space is never used
+-sbt=2 - square brackets horizontal tightness - space is never used
+-bbt=2 - code block curly braces horizontal tightness - space is never used
+-et=4 - entab leading whitespace with one tab character for each 4 spaces
+-baao - "break after all operators"
+-nsfs - no space before a semicolon in a for statement
+-vtc=1 - do not break before a closing token which is followed by a semicolon or another closing token, and is not in a list environment
+-ci=4 - continuation indentation - extra indentation spaces applied when a long line is broken, 4 spaces
 These are the recommended flags:
 
 -bar - keep the brace on the right even for multiple-line test expressions
