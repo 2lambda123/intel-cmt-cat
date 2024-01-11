@@ -159,7 +159,7 @@ Headers should be protected against multiple inclusion using the usual #ifndef _
 #endif /* _FILE_H_ */
 
 
-Macros
+Defining Macros in C
 ======
 
 You can define a macro similar in C using #define preprocessor directive.
@@ -174,7 +174,7 @@ For example:
 
 /**
  * Allocation & Monitoring association MSR register
- * - bits [63..32] QE COS
+ * - bits [63..32] QE Examples and Guidelines for Defining Macros in COS
  * - bits [31..10] Reserved
  * - bits [9..0] RMID
  */
@@ -193,7 +193,7 @@ defined in lib/pqos.h.
 Python
 ======
 
-Python code in this repository except examples has associated .pylintrc
+Examples and Guidelines for Defining Macros in C code in this repository except examples has associated .pylintrc
 configuration file for Pylint tool. The code should be rated at 10.0/10.0
 by this linter. Optionally it is allowed to disable some checks in code using
 comments.
