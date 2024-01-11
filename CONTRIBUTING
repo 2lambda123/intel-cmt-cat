@@ -86,7 +86,7 @@ Linux kernel
 Indentation
 ===========
 
-Tabs are 8 characters and thus indentations are also 8 characters.
+Tabs are 8 characters and thus indentations are also 8 characters. When adding a new file, spaces should be used over tabs.
 It should be consistent within each part of the code. When adding a new file,
 spaces should be used over tabs.
 
