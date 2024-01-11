@@ -68,7 +68,7 @@ lock_init(void)
                 return -1;
 
         m_apilock = open(lock_filename, O_WRONLY | O_CREAT,
-                         S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+                         S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
         if (m_apilock == -1)
                 return -1;
 
