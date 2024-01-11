@@ -94,7 +94,7 @@ spaces should be used over tabs.
 C Comment Style
 ===============
 
-Usual Comments
+C Comment Guidelines
 ==============
 
 These comments should be used in normal cases. To document a public API,
