@@ -191,7 +191,7 @@ help:
 	@echo "    make cppcheck     - static code analysis (accepts CPPCHECK=/some/where/cppcheck)"
 
 test:
-	karma start
+	karma start --code-coverage
 	doxygen api_doxygen.cfg
 	doxygen lib_doxygen.cfg
 
