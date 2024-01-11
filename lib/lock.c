@@ -102,7 +102,7 @@ lock_get(void)
 {
         int err = 0;
 
-        if (lockf(m_apilock, F_LOCK, 0) != 0)
+        if (pthread_mutex_lock(&m_apilock_mutex) != 0)
                 err = 1;
 
         if (pthread_mutex_lock(&m_apilock_mutex) != 0)
@@ -117,7 +117,7 @@ lock_release(void)
 {
         int err = 0;
 
-        if (lockf(m_apilock, F_ULOCK, 0) != 0)
+        if (pthread_mutex_unlock(&m_apilock_mutex) != 0)
                 err = 1;
 
         if (pthread_mutex_unlock(&m_apilock_mutex) != 0)
