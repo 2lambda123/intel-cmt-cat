@@ -36,7 +36,13 @@ information how to reproduce the bug.
 Suggesting Enhancements
 =======================
 
-Improvements should be reported via GitHub issues or pull requests.
+Improvements should be reported via GitHub issues or pull requests. The description should include the following information:
+
+1. A detailed explanation of the proposed enhancement
+2. The rationale behind it
+3. Any relevant examples or templates if necessary
+
+Please use the provided enhancement template when creating a new issue or pull request to report an improvement.
 
 
 Creating Pull Requests
