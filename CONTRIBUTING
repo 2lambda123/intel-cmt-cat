@@ -126,8 +126,8 @@ in a C file.
 Preprocessor Directives (Header Includes)
 =========================================
 
-Include files from the local application directory are included using quotes,
-while includes from other paths are included using angle brackets: “<>”.
+Include files from the local application directory are included using quotes,\nwhile includes from other paths are included using angle brackets: <>.\n\nExample:\n\n#include \"localfile.h\"\n#include <stdlib.h>
+while includes from other paths are included using angle brackets: <>.\n\nExample:\n\n#include \"localfile.h\"\n#include <stdlib.h>
 
 Example:
 
