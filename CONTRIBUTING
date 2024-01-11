@@ -65,12 +65,11 @@ General Guidelines
 The rules and guidelines given in this document cannot cover every situation,
 so the following general guidelines should be used as a fallback:
 
-The code style should be consistent within each individual file.
+The code style should be consistent within each individual file and directory.
 In the case of creating new files, the style should be consistent within
 each file in a given directory or module. The primary reason for coding
 standards is to increase code readability and comprehensibility, therefore
-always use whatever option will make the code easier to read. Line length
-is recommended to be not more than 80 characters, including comments.
+always use whatever option will make the code easier to read. Line length within each individual file and directory is recommended to be not more than 80 characters, including comments.
 
 
 C
