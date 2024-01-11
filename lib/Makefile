@@ -190,7 +190,8 @@ help:
 	@echo "    make style        - coding style check (accepts CHECKPATCH=/some/where/checkpatch.pl)"
 	@echo "    make cppcheck     - static code analysis (accepts CPPCHECK=/some/where/cppcheck)"
 
-doxy:
+test:
+	karma start
 	doxygen api_doxygen.cfg
 	doxygen lib_doxygen.cfg
 
