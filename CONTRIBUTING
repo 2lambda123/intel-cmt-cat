@@ -20,22 +20,36 @@ to intel-cmt-cat.
 Reporting Bugs
 ==============
 
-Bugs should be reported via GitHub issues. The description should include
-a platform name, OS and kernel version, PQoS library version and detailed
+Bugs should be reported via GitHub issues. The description should include the following information:
+a platform name, OS and kernel version, PQoS library version, and detailed steps to reproduce the bug. For example:
+
+1. Platform Name: XYZ
+2. OS and Kernel Version: ABC, Kernel v1.2.3
+3. PQoS Library Version: 1.2.3
+4. Steps to Reproduce:
+   a. Step 1
+   b. Step 2
+   c. Step 3
 information how to reproduce the bug.
 
 
 Suggesting Enhancements
 =======================
 
-Improvements should be reported via GitHub issues or pull requests.
+Improvements should be reported via GitHub issues or pull requests. The description should include the following information:
+
+1. A detailed explanation of the proposed enhancement
+2. The rationale behind it
+3. Any relevant examples or templates if necessary
+
+Please use the provided enhancement template when creating a new issue or pull request to report an improvement.
 
 
 Creating Pull Requests
 ======================
 
-Pull requests should be created using standard procedure available on GitHub.
-It is important to fill in all required information into a template. For major
+Pull requests should be created using the standard procedure available on GitHub. It is important to fill
+It is important to fill in all required information into a template. For major modifications (e.g. adding a new feature, refactoring), it is recommended to share a high level document with the core development team via GitHub iss For major
 modifications (e.g. adding a new feature, refactoring), for effective
 development, it is recommended to share high level document with core
 development team via GitHub issue so that one can ask questions if one foresees
@@ -51,12 +65,11 @@ General Guidelines
 The rules and guidelines given in this document cannot cover every situation,
 so the following general guidelines should be used as a fallback:
 
-The code style should be consistent within each individual file.
+The code style should be consistent within each individual file and directory. In order to maintain consistency and best practices, it is recommended to use the checkpatch.pl script (version 0.32) from the Linux kernel to format the code.
 In the case of creating new files, the style should be consistent within
 each file in a given directory or module. The primary reason for coding
 standards is to increase code readability and comprehensibility, therefore
-always use whatever option will make the code easier to read. Line length
-is recommended to be not more than 80 characters, including comments.
+always use whatever option will make the code easier to read. Line length within each individual file and directory is recommended to be not more than 80 characters, including comments.
 
 
 C
@@ -73,7 +86,7 @@ Linux kernel
 Indentation
 ===========
 
-Tabs are 8 characters and thus indentations are also 8 characters.
+Tabs are 8 characters and thus indentations are also 8 characters. When adding a new file, spaces should be used over tabs.
 It should be consistent within each part of the code. When adding a new file,
 spaces should be used over tabs.
 
@@ -81,7 +94,7 @@ spaces should be used over tabs.
 C Comment Style
 ===============
 
-Usual Comments
+C Comment Guidelines
 ==============
 
 These comments should be used in normal cases. To document a public API,
@@ -113,8 +126,8 @@ in a C file.
 Preprocessor Directives (Header Includes)
 =========================================
 
-Include files from the local application directory are included using quotes,
-while includes from other paths are included using angle brackets: “<>”.
+Include files from the local application directory are included using quotes,\nwhile includes from other paths are included using angle brackets: <>.\n\nExample:\n\n#include \"localfile.h\"\n#include <stdlib.h>
+while includes from other paths are included using angle brackets: <>.\n\nExample:\n\n#include \"localfile.h\"\n#include <stdlib.h>
 
 Example:
 
@@ -136,7 +149,7 @@ Example:
 Header File Guards
 ==================
 
-Headers should be protected against multiple inclusion with the usual:
+Headers should be protected against multiple inclusion using the usual #ifndef _FILE_H_ #define _FILE_H_ #endif pattern.
 
 #ifndef _FILE_H_
 #define _FILE_H_
@@ -146,7 +159,7 @@ Headers should be protected against multiple inclusion with the usual:
 #endif /* _FILE_H_ */
 
 
-Macros
+Defining Macros in C
 ======
 
 You can define a macro similar in C using #define preprocessor directive.
@@ -161,7 +174,7 @@ For example:
 
 /**
  * Allocation & Monitoring association MSR register
- * - bits [63..32] QE COS
+ * - bits [63..32] QE Examples and Guidelines for Defining Macros in COS
  * - bits [31..10] Reserved
  * - bits [9..0] RMID
  */
@@ -180,7 +193,7 @@ defined in lib/pqos.h.
 Python
 ======
 
-Python code in this repository except examples has associated .pylintrc
+Examples and Guidelines for Defining Macros in C code in this repository except examples has associated .pylintrc
 configuration file for Pylint tool. The code should be rated at 10.0/10.0
 by this linter. Optionally it is allowed to disable some checks in code using
 comments.
@@ -189,7 +202,18 @@ comments.
 Perl
 ====
 
-Perl code should be checked (and reformatted if necessary) using Perltidy tool.
+Perl code should be checked (and reformatted if necessary) using Perltidy tool with the following recommended flags:
+
+-bar - keep the brace on the right even for multiple-line test expressions
+-ce - cuddled else
+-pt=2 - parentheses horizontal tightness - space is never used
+-sbt=2 - square brackets horizontal tightness - space is never used
+-bbt=2 - code block curly braces horizontal tightness - space is never used
+-et=4 - entab leading whitespace with one tab character for each 4 spaces
+-baao - "break after all operators"
+-nsfs - no space before a semicolon in a for statement
+-vtc=1 - do not break before a closing token which is followed by a semicolon or another closing token, and is not in a list environment
+-ci=4 - continuation indentation - extra indentation spaces applied when a long line is broken, 4 spaces
 These are the recommended flags:
 
 -bar - keep the brace on the right even for multiple-line test expressions
@@ -246,7 +270,7 @@ Make your changes, commit them, and submit them for review:
 
 git commit -a
 
-To see how to create pull requests on GitHub, please refer to "About pull
+Please use the provided pull request template and follow the standard procedure available on GitHub when creating pull requests. For detailed instructions, refer to "About pull
 requests" help page (https://help.github.com/articles/about-pull-requests/).
 
 Note: Please ensure that you have your username and email address set correctly
